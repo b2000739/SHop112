@@ -1,0 +1,27 @@
+.head {
+  height: 90px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 12px;
+}
+.head .logo {
+  width: 112px;
+  height: 24px;
+  align-self: center;
+  /* сверху | справа | снизу | слева */
+}
+.head h2 {
+  list-style: none;
+  padding: 0px 17.5px;
+  /* по вертикали | по горизонтали */
+  color: gray;
+  text-transform: uppercase;
+}
+.head h2 a:hover {
+  color: black;
+}
+.head h2 a {
+  color: inherit;
+  text-decoration: none;
+}

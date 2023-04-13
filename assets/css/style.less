@@ -1,0 +1,555 @@
+@font-face {
+	font-family: 'Verdana';
+	src: url(assets/fonts/Verdana.ttf);
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Verdana';
+	src: url(assets/fonts/Verdana-Black.ttf);
+	font-weight: 800;
+}
+
+@font-face {
+	font-family: 'Verdana';
+	src: url(assets/fonts/Verdana-Italic.ttf);
+	font-style: italic;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Verdana';
+	src: url(assets/fonts/Verdana-Bold.ttf);
+	font-weight: 700;
+}
+
+* {
+	font-family: 'Verdana';
+}
+
+.rating {
+	i {
+		color: rgb(202, 202, 27);
+	}
+}
+
+.cart_down {
+	background-color: rgb(163, 44, 0) !important;
+}
+
+
+
+.pink {
+	i {
+		color: pink;
+	}
+}
+
+.catalog {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+
+	.product-list {
+		display: flex;
+
+		flex-flow: column;
+		display: grid;
+		grid-gap: 40px 0;
+		grid-template: repeat(4, 435px) / repeat(3, 470px);
+
+		form {
+			box-sizing: border-box;
+		}
+
+		.last_child {
+			grid-area: 2/1;
+		}
+
+		.categories {
+			input {
+				opacity: 0;
+			}
+		}
+
+
+		.categories-activ {
+			border: 2px solid #FF5500;
+		}
+
+		.product-item {
+
+			width: 400px;
+			position: relative;
+			background-color: rgba(128, 128, 128, 0.1);
+
+			/* по вертикали | по горизонтали */
+			padding: 30px 0px 80px 0px;
+			/* сверху | справа | снизу | слева */
+			border-radius: 0.8rem;
+
+
+
+			.heart {
+
+				position: absolute;
+				// color: rgb(56, 55, 63);
+				right: 0;
+			}
+
+			.product-img {
+				display: flex;
+				justify-content: center;
+
+
+				img {
+					height: 200px;
+
+				}
+
+
+
+			}
+
+			.product-text {
+
+				display: flex;
+				flex-flow: column;
+				align-items: center;
+
+				h3 {
+
+
+					font-weight: 700;
+					color: black;
+					text-align: center;
+				}
+
+				.block {
+					position: absolute;
+					bottom: 30;
+
+
+
+					.description {
+						background-color: orangered;
+						width: 300px;
+						padding: 20px 0px;
+						/* по вертикали | по горизонтали */
+						border-radius: 0.8rem 0.8rem 0px 0rem;
+						/* сверху | справа | снизу | слева */
+						;
+						font-size: 14pt;
+						font-weight: 700;
+
+
+
+						a {
+							text-decoration: none;
+							color: inherit;
+
+							p {
+								margin: 0;
+								color: white;
+								text-align: center;
+							}
+						}
+					}
+
+					.price {
+						border-radius: 0px 0px 0.8rem;
+						/* сверху | горизонтально | снизу */
+						display: block;
+						text-align: center;
+						background-color: orange;
+						color: white;
+						width: 300px;
+						font-weight: 800;
+						font-size: 17pt;
+						margin-top: -1%;
+						padding: 1% 0px;
+						/* по вертикали | по горизонтали */
+					}
+				}
+			}
+		}
+	}
+}
+
+.fullproduct {
+
+	.name {
+		display: flex;
+		justify-content: center;
+		font-weight: 800;
+		font-size: 24px;
+		line-height: 150%;
+	}
+
+	.content_all {
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+
+
+
+		.rating-area:not(:checked)>input {
+			display: none;
+		}
+
+		.rating-area:not(:checked)>label {
+			float: right;
+			width: 42px;
+			padding: 0;
+			cursor: pointer;
+			font-size: 32px;
+			line-height: 32px;
+			color: lightgrey;
+			text-shadow: 1px 1px #bbb;
+			line-height: 75%;
+		}
+
+		.rating-area:not(:checked)>label:before {
+			content: '★';
+
+		}
+
+		.rating-area>input:checked~label {
+			color: gold;
+			text-shadow: 1px 1px #c60;
+		}
+
+		.rating-area:not(:checked)>label:hover,
+		.rating-area:not(:checked)>label:hover~label {
+			color: gold;
+		}
+
+		.rating-area>input:checked+label:hover,
+		.rating-area>input:checked+label:hover~label,
+		.rating-area>input:checked~label:hover,
+		.rating-area>input:checked~label:hover~label,
+		.rating-area>label:hover~input:checked~label {
+			color: gold;
+			text-shadow: 1px 1px goldenrod;
+		}
+
+		.rate-area>label:active {
+			position: relative;
+		}
+	}
+
+	.content_box {
+		width: 1000px;
+		display: flex;
+
+		.ico_box {
+			line-height: 150%;
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			font-size: 13pt;
+			padding: 0px;
+
+			i {
+				font-size: 18pt;
+			}
+
+			.count {
+				margin-right: 24px;
+			}
+
+			a {
+
+
+				text-decoration-line: underline;
+				color: #414141;
+
+			}
+		}
+
+		.price {
+			filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+			font-weight: 700;
+			font-size: 36px;
+			line-height: 150%;
+		}
+
+		.cartadd {
+			cursor: pointer;
+			width: inherit;
+			background-color: orangered;
+			display: flex;
+			color: white;
+			padding: 16px;
+			gap: 8px;
+			border-radius: 4px;
+			padding: 16px;
+			margin-bottom: 24px;
+
+			p {
+				width: 100%;
+				text-align: center;
+				font-weight: 400;
+				font-size: 24px;
+				margin: 0;
+			}
+
+			.cart {
+				height: inherit;
+				display: flex;
+				align-items: center;
+
+				img {
+
+					width: 32px;
+					height: 32px;
+				}
+			}
+		}
+
+		.photo {
+			margin-right: 40px;
+			order: -1;
+			height: 600px;
+
+			img {
+				height: inherit;
+				width: auto;
+			}
+		}
+	}
+
+	.feedback {
+		margin-left: 40px;
+		width: 80%;
+		display: flex;
+		flex-flow: column;
+
+		.feed_box {
+			display: flex;
+
+			.user_box {
+				margin-left: 144px;
+
+				.comment_box {
+					margin-top: 50px;
+
+					.comment_line {
+						.first_row {
+							display: flex;
+
+							.ico_el {
+								margin-right: 18px;
+							}
+
+							.user-name {
+								p {
+									font-size: 18px;
+									line-height: 225%;
+									color: #414141;
+									margin: 0;
+								}
+							}
+						}
+
+						.second_row {
+							display: flex;
+							margin: 10px 0px;
+
+							p {
+								margin: 0;
+								margin-left: 10px;
+								color: rgba(143, 143, 143, 1);
+								line-height: 165%;
+								font-size: 12px;
+							}
+
+							/* по вертикали | по горизонтали */
+						}
+					}
+				}
+
+				.txt_box {
+					display: flex;
+					margin-bottom: 16px;
+
+					.txt {
+						margin-right: 16px;
+
+						p {
+							margin: 0;
+							font-weight: 700;
+							font-size: 18px;
+							line-height: 150%;
+							color: #414141;
+
+						}
+					}
+				}
+
+				.form_box {
+					.form {
+						width: 700px;
+						height: 125px;
+						box-sizing: border-box;
+						border: 2px solid #ccc;
+						border-radius: 4px;
+						background-color: #f8f8f8;
+						font-size: 16px;
+						resize: none;
+						margin-bottom: 24px;
+
+					}
+
+					.btn {
+						display: flex;
+						flex-direction: row;
+						justify-content: center;
+						align-items: center;
+						padding: 8px;
+						gap: 8px;
+						width: 188px;
+
+						background: #FCD5BA;
+						border-radius: 4px;
+
+						input {
+							border: none;
+							outline: none;
+							background: initial;
+							font-size: 16px;
+							line-height: 150%;
+							display: flex;
+							align-items: center;
+							text-align: center;
+							color: #FF6633;
+
+						}
+					}
+				}
+			}
+
+			.left_box {
+				.stars {
+					margin-right: 16px;
+					line-height: 150%;
+
+					img {
+						width: 16px;
+						height: 16px;
+					}
+				}
+
+				.open_box {
+					display: flex;
+					font-weight: 800;
+					font-size: 18px;
+					color: #414141;
+					margin-bottom: 16px;
+
+				}
+
+				.line_box {
+					.line {
+						display: flex;
+						margin: 2px 0px;
+						/* по вертикали | по горизонтали */
+						;
+
+						.stars {
+							margin: 0px 16px;
+							line-height: 150%;
+							/* по вертикали | по горизонтали */
+						}
+
+						.rating {
+							width: 20px;
+							height: 24px;
+							font-weight: 400;
+							font-size: 16px;
+							line-height: 150%;
+							color: #414141;
+
+						}
+					}
+				}
+			}
+
+
+
+			#feedback {
+
+				display: flex;
+				justify-content: flex-start;
+
+				font-weight: 700;
+				font-size: 20pt;
+				color: #414141;
+
+				h2 {
+					color: #414141;
+
+				}
+			}
+		}
+	}
+}
+
+.register,
+.login,
+.add,
+.edit {
+	.container {
+		padding: 16px;
+	}
+
+	/* Full-width input fields */
+	input[type=text],
+	input[type=password] {
+		width: 100%;
+		padding: 15px 0px;
+		margin: 5px 0 22px 0;
+		display: inline-block;
+		border: none;
+		background: #f1f1f1;
+	}
+
+	input[type=text]:focus,
+	input[type=password]:focus {
+		background-color: #ddd;
+		outline: none;
+	}
+
+	/* Overwrite default styles of hr */
+	form {
+		border: 1px solid #f1f1f1;
+		margin-bottom: 25px;
+	}
+
+	/* Set a style for the submit/register button */
+	.btn {
+		background-color: #4CAF50;
+		color: white;
+		padding: 16px 20px;
+		margin: 8px 0;
+		border: none;
+		cursor: pointer;
+		width: 100%;
+		opacity: 0.9;
+	}
+
+	.btn:hover {
+		opacity: 1;
+	}
+
+	/* Add a blue text color to links */
+	a {
+		color: dodgerblue;
+	}
+
+	/* Set a grey background color and center the text of the "sign in" section */
+	.signin {
+		background-color: #f1f1f1;
+		text-align: center;
+	}
+}
